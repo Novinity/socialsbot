@@ -8,8 +8,8 @@ module.exports = {
         .setDescription('Add a social to the server.')
         .addStringOption(option =>
             option
-                .setName('link')
-                .setDescription("The link to remove")
+                .setName('title')
+                .setDescription("The title of the link to remove")
                 .setRequired(true))
         .addBooleanOption(option =>
             option
@@ -20,7 +20,7 @@ module.exports = {
         const personal = interaction.options.getBoolean('personal');
 
         if (personal) {
-            const link = interaction.options.getString('link');
+            const title = interaction.options.getString('title');
             
             const fileContents = fs.readFileSync('config/config.json', function read(err, data) {
                 if (err) throw err;
@@ -28,11 +28,11 @@ module.exports = {
             });
             const obj = JSON.parse(fileContents);
 
-            let title = "";
+            let link = "";
 
             for (var i in obj.users[interaction.user.id.toString()]) {
-                if (obj.users[interaction.user.id.toString()][i] == link) {
-                    title = i;
+                if (i == title) {
+                    link = i;
                     delete obj.users[interaction.user.id.toString()][i]
                     break;
                 }
@@ -40,7 +40,7 @@ module.exports = {
 
             fs.writeFileSync('config/config.json', JSON.stringify(obj));
 
-            if (title != "") {
+            if (link != "") {
                 interaction.reply({ content: "Removed " + title + " with link " + link + " from your account!", ephemeral: true });
             } else {
                 interaction.reply({ content: "Failed to find item with link " + link + " on your account.\nMake sure you type it in EXACTLY as it is in the message (right click > copy link)!", ephemeral: true });
@@ -49,7 +49,7 @@ module.exports = {
             if (!interaction.member.permissions.has(PermissionFlagsBits.Administrator)) 
                 interaction.reply({ content: "This command requires Administrator permission.", ephemeral: true });
 
-            const link = interaction.options.getString('link');
+            const title = interaction.options.getString('title');
             
             const fileContents = fs.readFileSync('config/config.json', function read(err, data) {
                 if (err) throw err;
@@ -57,10 +57,10 @@ module.exports = {
             });
             const obj = JSON.parse(fileContents);
 
-            let title = "";
+            let link = "";
 
             for (var i in obj.servers[interaction.guild.id.toString()]) {
-                if (obj.servers[interaction.guild.id.toString()][i] == link) {
+                if (obj.servers[interaction.guild.id.toString()] == title) {
                     title = i;
                     delete obj.servers[interaction.guild.id.toString()][i]
                     break;

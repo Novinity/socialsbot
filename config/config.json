@@ -1,1 +1,26 @@
-{"servers":{"910992098537402429":{"Youtube":"https://youtube.com/@novinity"},"1157305944988979301":{"Youtube1":"https://www.youtube.com/channel/UC3W9OTQ14dxarxhdvvD_hvA","Freshcut":"https://freshcut.gg/@jiimmy_frowns","Youtube2":"https://www.youtube.com/channel/UCA3sU9hqiBiTMxAwK34AbOQ","Roblox":"https://www.roblox.com/users/3019585535/profile?friendshipSourceType=PlayerSearch","Group":"https://www.roblox.com/groups/15791259/AIGHTER-Games#!/about"},"1101070514761502752":{"Youtube":"https://youtube.com/@novinitygames","Patreon":"https://www.patreon.com/Novinity","Other Discord":"https://discord.gg/RPH54TZXSC"},"1141918039592419379":{"Youtube":"https://youtube.com/@novinity","Patreon":"https://www.patreon.com/Novinity","Game Development Discord":"https://discord.gg/dRfX6A72SV"},"1152009165494038568":{}},"users":{"860838128444637204":{"Youtube":"https://youtube.com/@novinity/"}}}
+{
+  "servers": {
+    "910992098537402429": { "Youtube": "https://youtube.com/@novinity" },
+    "1157305944988979301": {
+      "Youtube1": "https://www.youtube.com/channel/UC3W9OTQ14dxarxhdvvD_hvA",
+      "Freshcut": "https://freshcut.gg/@jiimmy_frowns",
+      "Youtube2": "https://www.youtube.com/channel/UCA3sU9hqiBiTMxAwK34AbOQ",
+      "Roblox": "https://www.roblox.com/users/3019585535/profile?friendshipSourceType=PlayerSearch",
+      "Group": "https://www.roblox.com/groups/15791259/AIGHTER-Games#!/about"
+    },
+    "1101070514761502752": {
+      "Youtube": "https://youtube.com/@novinitygames",
+      "Patreon": "https://www.patreon.com/Novinity",
+      "Other Discord": "https://discord.gg/RPH54TZXSC"
+    },
+    "1141918039592419379": {
+      "Youtube": "https://youtube.com/@novinity",
+      "Patreon": "https://www.patreon.com/Novinity",
+      "Game Development Discord": "https://discord.gg/dRfX6A72SV"
+    },
+    "1152009165494038568": {}
+  },
+  "users": {
+    
+  }
+}
