@@ -10,7 +10,8 @@ module.exports = {
             .setTitle("Help")
             .addFields(
                 { name: "User Commands", value: "/socials - Display the socials for either the specified user, or the server.\n/addsocial - Add a social to your personal list\n/removesocial - Remove social from your personal list." },
-                { name: "Server Commands", value: "/addsocial - Add a social to the server's list.\n/removesocial - Remove social from the server's list."}
+                { name: "Server Commands", value: "/addsocial - Add a social to the server's list.\n/removesocial - Remove social from the server's list."},
+                { name: "Other", value: "/invite - Get the link to invite the bot to your server." }
             )
             .setThumbnail(interaction.guild.iconURL());
         
