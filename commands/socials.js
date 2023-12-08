@@ -5,33 +5,63 @@ const fs = require('node:fs');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('socials')
-        .setDescription('Links socials!'),
+        .setDescription('Links socials!')
+        .addMentionableOption(option => 
+            option
+                .setName('user')
+                .setDescription('User to list the socials of!')
+                .setRequired(false)),
     async execute(interaction, client) {
+        const user = interaction.options.getUser('user');
+
         const fileContents = fs.readFileSync('config/config.json', function read(err, data) {
             if (err) throw err;
             return data;
         });
         const obj = JSON.parse(fileContents);
 
-        if (obj.servers[interaction.guild.id.toString()] == null || Object.keys(obj.servers[interaction.guild.id.toString()]).length == 0) {
-            interaction.reply("This server doesn't have any socials yet!");
-            return;
+        if (user == null) {
+            if (obj.servers[interaction.guild.id.toString()] == null || Object.keys(obj.servers[interaction.guild.id.toString()]).length == 0) {
+                interaction.reply("This server doesn't have any socials yet!");
+                return;
+            }
+    
+            let finalMsg = "";
+            for (var i in obj.servers[interaction.guild.id.toString()]) {
+                finalMsg += "["+i+"]("+obj.servers[interaction.guild.id.toString()][i]+")\n";
+            }
+    
+            const embed = new EmbedBuilder()
+                .setColor(0x88FF8A)
+                .setTitle("Socials for " + interaction.guild.name)
+                .addFields(
+                    { name: "Links", value: finalMsg }
+                )
+                .setThumbnail(interaction.guild.iconURL())
+                .setFooter({ text: "It is recommended that you double check the URL you click, just in case!" });
+    
+            interaction.reply({ embeds: [embed] });
+        } else {
+            if (obj.users[user.id.toString()] == null || Object.keys(obj.users[user.id.toString()]).length == 0) {
+                interaction.reply({ content: user.displayName + " doesn't have any socials yet!", ephemeral: true });
+                return;
+            }
+    
+            let finalMsg = "";
+            for (var i in obj.users[user.id.toString()]) {
+                finalMsg += "["+i+"]("+obj.users[user.id.toString()][i]+")\n";
+            }
+    
+            const embed = new EmbedBuilder()
+                .setColor(0x88FF8A)
+                .setTitle("Socials for " + user.globalName)
+                .addFields(
+                    { name: "Links", value: finalMsg }
+                )
+                .setThumbnail(user.avatarURL())
+                .setFooter({ text: "It is recommended that you double check the URL you click, just in case!" });
+    
+            interaction.reply({ embeds: [embed], ephemeral: true });
         }
-
-        let finalMsg = "";
-        for (var i in obj.servers[interaction.guild.id.toString()]) {
-            finalMsg += "["+i+"]("+obj.servers[interaction.guild.id.toString()][i]+")\n";
-        }
-
-        const embed = new EmbedBuilder()
-            .setColor(0x88FF8A)
-            .setTitle("Socials for " + interaction.guild.name)
-            .addFields(
-                { name: "Links", value: finalMsg }
-            )
-            .setThumbnail(interaction.guild.iconURL())
-            .setFooter({ text: "It is recommended that you double check the URL you click, just in case!" });
-
-        interaction.reply({ embeds: [embed] });
-    }
+    } 
 }
