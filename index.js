@@ -65,7 +65,7 @@ client.on(discord.Events.GuildCreate, async event => {
 
 	obj.servers[event.id.toString()] = {};
 
-	fs.writeFileSync('config/config.json', JSON.stringify(obj));
+	fs.writeFileSync('config/config.json', JSON.stringify(obj, null, 4));
 });
 
 client.on(discord.Events.GuildDelete, async event => {
@@ -77,7 +77,7 @@ client.on(discord.Events.GuildDelete, async event => {
 
 	delete obj.servers[event.id.toString()];
 
-	fs.writeFileSync('config/config.json', JSON.stringify(obj));
+	fs.writeFileSync('config/config.json', JSON.stringify(obj, null, 4));
 });
 
 keepAlive();

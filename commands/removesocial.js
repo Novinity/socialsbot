@@ -38,7 +38,7 @@ module.exports = {
                 }
             }
 
-            fs.writeFileSync('config/config.json', JSON.stringify(obj));
+            fs.writeFileSync('config/config.json', JSON.stringify(obj, null, 4));
 
             if (link != "") {
                 interaction.reply({ content: "Removed " + title + " with link " + link + " from your account!", ephemeral: true });
@@ -67,7 +67,7 @@ module.exports = {
                 }
             }
 
-            fs.writeFileSync('config/config.json', JSON.stringify(obj));
+            fs.writeFileSync('config/config.json', JSON.stringify(obj, null, 4));
 
             if (title != "") {
                 interaction.reply({ content: "Removed " + title + " with link " + link + "!", ephemeral: true });

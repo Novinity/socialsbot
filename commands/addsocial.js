@@ -44,7 +44,7 @@ module.exports = {
                 obj.users[interaction.user.id.toString()][link] = link;
             }
 
-            fs.writeFileSync('config/config.json', JSON.stringify(obj));
+            fs.writeFileSync('config/config.json', JSON.stringify(obj, null, 4));
 
             interaction.reply({ content: "Added " + link + " as " + title + " to your account!", ephemeral: true });
 
@@ -62,13 +62,17 @@ module.exports = {
             });
             const obj = JSON.parse(fileContents);
 
+            if (!obj.servers[interaction.guild.id.toString()]) {
+                obj.servers[interaction.guild.id.toString()] = {}
+            }
+
             if (title) {
                 obj.servers[interaction.guild.id.toString()][title] = link;
             } else {
                 obj.servers[interaction.guild.id.toString()][link] = link;
             }
 
-            fs.writeFileSync('config/config.json', JSON.stringify(obj));
+            fs.writeFileSync('config/config.json', JSON.stringify(obj, null, 4));
 
             interaction.reply({ content: "Added " + link + " as " + title + "!", ephemeral: true });
         }

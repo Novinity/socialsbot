@@ -1,26 +1,75 @@
 {
   "servers": {
-    "910992098537402429": { "Youtube": "https://youtube.com/@novinity" },
+    "910992098537402429": {
+      "Youtube": "https://youtube.com/@novinity",
+      "Hello": "https://scopetube.xyz"
+    },
     "1157305944988979301": {
-      "Youtube1": "https://www.youtube.com/channel/UC3W9OTQ14dxarxhdvvD_hvA",
-      "Freshcut": "https://freshcut.gg/@jiimmy_frowns",
-      "Youtube2": "https://www.youtube.com/channel/UCA3sU9hqiBiTMxAwK34AbOQ",
+      "Youtube1": "https://youtube.com/@aitherehhh",
+      "Freshcut": "https://freshcut.gg/@aighter",
       "Roblox": "https://www.roblox.com/users/3019585535/profile?friendshipSourceType=PlayerSearch",
       "Group": "https://www.roblox.com/groups/15791259/AIGHTER-Games#!/about"
-    },
-    "1101070514761502752": {
-      "Youtube": "https://youtube.com/@novinitygames",
-      "Patreon": "https://www.patreon.com/Novinity",
-      "Other Discord": "https://discord.gg/RPH54TZXSC"
     },
     "1141918039592419379": {
       "Youtube": "https://youtube.com/@novinity",
       "Patreon": "https://www.patreon.com/Novinity",
-      "Game Development Discord": "https://discord.gg/dRfX6A72SV"
+      "Game Development Discord": "https://discord.gg/dRfX6A72SV",
+      "Spotify": "https://open.spotify.com/artist/1BAC5vS9HR2PUbpj3GwI4y?si=37340447f6e14983"
     },
-    "1152009165494038568": {}
+    "1152009165494038568": {},
+    "1101070514761502752": {
+      "Youtube": "https://youtube.com/@novinitygames",
+      "Gaming/Music Discord": "https://discord.gg/RPH54TZXSC",
+      "Roblox Group": "https://www.roblox.com/groups/32036762/NOVINITY#!/about",
+      "Spotify": "https://open.spotify.com/artist/7u9AnGPZI6x315fSgLPifN?si=6a2fe901c6be451a"
+    },
+    "1170529506864398417": {
+      "Youtube": "https://www.youtube.com/channel/UC5ayPJ7lfvs69Ok0YYqeCug",
+      "Twitter": "https://twitter.com/BloxGrizzly",
+      "Group": "https://www.roblox.com/groups/32968904/Grizzlys-Studio#!/about"
+    },
+    "1135895835209633832": {},
+    "1182330154765262848": {},
+    "899144844381917254": {},
+    "1183743180101910550": {},
+    "1184098916661207060": {},
+    "1124304256518848543": {},
+    "1139988172600778803": {},
+    "1177100388739076106": {
+      "X": "https://x.com/rhinerewards",
+      "Website": "https://www.rhinerewards.com/",
+      "Telegram": "https://t.me/RhineRewards",
+      "Discord": "https://discord.gg/gmgmjrDKWJ"
+    },
+    "1203743607752884305": {
+      "Group": "https://www.roblox.com/groups/15791259/AIGHTER-Games#!/about",
+      "Youtube": "https://youtube.com/@aitherehhh"
+    }
   },
   "users": {
-    
+    "860838128444637204": {
+      "Gaming/Music Youtube": "https://youtube.com/@novinity",
+      "Game Dev Youtube": "https://youtube.com/@novinitygames",
+      "Patreon": "https://patreon.com/Novinity",
+      "Roblox Group": "https://www.roblox.com/groups/32036762/NOVINITY",
+      "Spotify": "https://open.spotify.com/artist/1BAC5vS9HR2PUbpj3GwI4y?si=37340447f6e14983"
+    },
+    "1160267051110240328": {
+      "My Youtube!": "https://www.youtube.com/channel/UCA3sU9hqiBiTMxAwK34AbOQ",
+      "My Group": "https://www.roblox.com/groups/15791259/AIGHTER-Games#!/about"
+    },
+    "1144992893816291369": {
+      "Youtube": "https://www.youtube.com/channel/UCwPuflFP1DIaMBQ6V9yttkw"
+    },
+    "394594679221518336": { "test": "https://top.gg" },
+    "967246975898648607": {
+      "hot": "https://www.instagram.com/vaaleriascarruuyo/"
+    },
+    "802517749502836756": {
+      "Instagram": "https://www.instagram.com/chiekyee_/"
+    },
+    "1026378668425093181": {
+      "youtube": "https://youtube.com/@godofgod?si=PFggRRivhKBAT11l"
+    }
   }
 }
