@@ -41,7 +41,7 @@ module.exports = {
             return;
         }
 
-        const existing = await sql`SELECT * FROM socials WHERE linked_id = ${linkedId}, title = ${title}`;
+        const existing = await sql`SELECT * FROM socials WHERE linked_id = ${linkedId} AND title = ${title}`;
         if (existing && existing.length > 0) {
             await interaction.reply({content: "Social must have a unique name from all the other linked socials.", flags: "Ephemeral"});
             return;
