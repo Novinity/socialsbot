@@ -48,7 +48,10 @@ module.exports = {
         }
 
         const res = await sql`INSERT INTO socials (linked_id, name, url) VALUES (${linkedId}, ${title}, ${link})`;
-        if (res) await interaction.reply({content: `Successfully added [${title}](${link}) to ${personal ? "your" : "the server's"} socials.`, flags: "Ephemeral"});
+        if (res) {
+            await interaction.reply({content: `Successfully added [${title}](${link}) to ${personal ? "your" : "the server's"} socials.`, flags: "Ephemeral"});
+            console.log(`${interaction.user.username} (${interaction.user.id}) added ${title} - ${link} to ${personal ? "self" : `${interaction.guild?.name} (${linkedId})`}`);
+        }
         else await interaction.reply({content: `Failed to add social.`, flags: "Ephemeral"});
     }
 }

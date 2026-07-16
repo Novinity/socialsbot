@@ -34,7 +34,10 @@ module.exports = {
         }
 
         const res = await sql`DELETE FROM socials WHERE linked_id = ${linkedId} AND name = ${title}`;
-        if (res) await interaction.reply({content: `Successfully removed ${title} from ${personal ? "your" : "the server's"} socials.`, flags: "Ephemeral"});
+        if (res) {
+            await interaction.reply({content: `Successfully removed ${title} from ${personal ? "your" : "the server's"} socials.`, flags: "Ephemeral"});
+            console.log(`${interaction.user.username} (${interaction.user.id}) removed ${title} (${existing[0].url}) from ${personal ? "self" : `${interaction.guild?.name} (${linkedId})`}`);
+        }
         else await interaction.reply({content: `Failed to remove social.`, flags: "Ephemeral"});
     }
 }

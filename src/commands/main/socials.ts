@@ -56,5 +56,6 @@ module.exports = {
             .setFooter({ text: "It is recommended that you double check the URL you click, just in case!" });
 
         await interaction.reply({ embeds: [embed], flags: "Ephemeral" });
+        console.log(`${interaction.user.username} (${interaction.user.id}) viewed the socials of ${user ? user.username : interaction.guild?.name} (${user ? user.id : interaction.guild?.id})`);
     }
 }

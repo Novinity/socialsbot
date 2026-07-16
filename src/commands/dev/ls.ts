@@ -10,7 +10,7 @@ module.exports = {
         if (interaction.user.id.toString() === "860838128444637204") {
             let final = "";
             client.guilds.cache.forEach(element => {
-                final += element.name + " - " + element.memberCount + "\n";
+                final += `${element.name} (${element.id}) - ${element.memberCount}\n`;
             });
             interaction.reply({ content: final, ephemeral: true });
         }
