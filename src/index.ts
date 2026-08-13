@@ -8,9 +8,7 @@ configDotenv();
 // Create the discord client
 const client = new Client({
     intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildMembers,
-        // GatewayIntentBits.GuildMessages
+        GatewayIntentBits.Guilds
     ]
 });
 

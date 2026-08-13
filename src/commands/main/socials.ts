@@ -15,6 +15,7 @@ module.exports = {
         const sql = interaction.client.sql;
         const user = interaction.options.getUser('user') ?? null;
         const targetId = user ? user.id : interaction.guild?.id;
+        console.log(user);
 
         if (!targetId) {
             await interaction.reply({
